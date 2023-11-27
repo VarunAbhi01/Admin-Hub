@@ -1,0 +1,50 @@
+@import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+ 
+.home { 
+  display: grid;
+  gap: 20px;
+  /* there r 4 cols of equal width in which we set boxes in it. if we increase 1fr to 2 or 3fr that particualr col width increases */
+  grid-template-columns: repeat(4, 1fr);
+  /* a min size is given so we can change it acc in individual grid box code */
+  grid-auto-rows: minmax(180px, auto);
+  grid-auto-flow: dense;
+
+  @include xl{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include lg{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include md {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @include sm {
+    grid-auto-rows: minmax(120px, auto);
+  }
+
+  .box {
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid $soft-bg;
+  }
+
+  .box1 {
+    /* gird col span units inc size horiz and gri row span units chnages size vertically */
+    grid-column: span 1;
+    grid-row: span 3;
+  }
+
+  .box4 {
+    grid-column: span 1;
+    grid-row: span 3;
+  }
+  .box7 {
+    grid-column: span 2;
+    grid-row: span 2;
+
+    @include md {
+      display: none;
+    }
+  }
+} 
