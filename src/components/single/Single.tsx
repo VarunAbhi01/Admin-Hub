@@ -20,7 +20,7 @@ import {
     };
     activities?: { time: string; text: string }[];
   };
-  
+   
   const Single = (props: Props) => {
     return (
       <div className="single">

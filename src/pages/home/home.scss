@@ -1,13 +1,14 @@
 @import "../../styles/variables.scss";
 @import "../../styles/responsive.scss";
  
-.home { 
+.home {  
   display: grid;
   gap: 20px;
   /* there r 4 cols of equal width in which we set boxes in it. if we increase 1fr to 2 or 3fr that particualr col width increases */
   grid-template-columns: repeat(4, 1fr);
-  /* a min size is given so we can change it acc in individual grid box code */
+  /* min is set to 180 px which wont contract beyond this but can grow to accomodate to the fullest size */
   grid-auto-rows: minmax(180px, auto);
+  // reduces the empty spaces by the grid automatically filling the spaces
   grid-auto-flow: dense;
 
   @include xl{
@@ -30,7 +31,7 @@
   }
 
   .box1 {
-    /* gird col span units inc size horiz and gri row span units chnages size vertically */
+    /* gird col span units inc size horiz and grid row span units chnages size vertically */
     grid-column: span 1;
     grid-row: span 3;
   }

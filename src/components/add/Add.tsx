@@ -3,7 +3,7 @@ import "./add.scss";
 // import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 type Props = {
-  slug: string;
+  slug: string; 
   columns: GridColDef[];
 //   its the open type in setOpen of users obtained by hovering over it 
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;

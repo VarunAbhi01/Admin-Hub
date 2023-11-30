@@ -83,7 +83,7 @@ const Users = () => {
  {/* we are passing the GridColDef data stored in as columns to datagrid */}
 {/* the user rows is the data importede form userRows which is in data file */}
       <DataTable slug="users" columns={columns} rows={userRows} />
-
+ 
       {/* TEST THE API */}
 
 {/* if its loading just show the text loading if not show the data table */}

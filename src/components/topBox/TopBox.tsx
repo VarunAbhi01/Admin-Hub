@@ -1,4 +1,4 @@
-import "./topBox.scss"
+import "./topBox.scss" 
 import {topDealUsers} from "../../data.ts"
 
 const TopBox = () => {
@@ -10,7 +10,7 @@ const TopBox = () => {
           <div className="listItem" key={user.id}>
         
             <div className="user">
-              <img src={user.img} alt="" />
+              {/* <img src={user.img} alt="" /> */}
               <div className="userTexts">
                 <span className="username">{user.username}</span>
                 <span className="email">{user.email}</span>

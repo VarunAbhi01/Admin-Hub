@@ -16,7 +16,8 @@ import {
   QueryClientProvider,
 } from "@tanstack/react-query";
 
-
+// to enaable react query features throughout the app
+// ract query is used to fetch,update,delete data in react app
 const queryClient = new QueryClient();
 
 function App() {
@@ -78,10 +79,7 @@ function App() {
         },
       ],
     },
-    // {
-    //   path: "/login",
-    //   element: <Login />,
-    // },
+    
   ]);
 
   return <RouterProvider router={router} />;
